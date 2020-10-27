@@ -1,0 +1,29 @@
+@import '../../assets/styles/_variables';
+.navigation {
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: none;
+  }
+  li {
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      height: 4px;
+      bottom: -1px;
+      margin: 0 auto;
+      left: 0;
+      width: 10px;
+      background: rgba(0, 0, 0, .2);
+      transition: width .4s ease-in-out;
+    }
+    &.active:after {
+      background: $theme-color-bg;
+    }
+  }
+}

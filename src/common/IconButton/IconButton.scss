@@ -1,0 +1,33 @@
+.icon-button {
+  border-radius: 50%;
+  border-width: 0;
+  background-color: transparent;
+  padding: 0px;
+
+  .icon-button-inner {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-sm {
+    padding: 4px;
+  }
+  .btn-size {
+    padding: 1em;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .1);
+  }
+  &:active {
+    opacity: 0.8;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+}

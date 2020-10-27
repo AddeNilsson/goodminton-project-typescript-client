@@ -1,0 +1,32 @@
+@import '../../assets/styles/_variables';
+
+.list {
+  margin: 0;
+  padding: 0;
+}
+.list-header {
+  padding: 12px 24px;
+  background-color: $theme-color-bg;
+  color: $theme-color-text-light;
+  &.dense {
+    padding: 8px 16px;
+  }
+}
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 12px 24px;
+  position: relative;
+  margin: 0;
+  &:hover {
+    background-color: darken(white, 5%);
+  }
+}
+.dense {
+  padding: 8px 16px;
+}
+.divider:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+}

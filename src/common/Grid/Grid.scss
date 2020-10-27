@@ -1,0 +1,68 @@
+@import '../../assets/styles/_variables';
+
+/* Create columns & columns with gutter for xs */
+@for $i from 1 through 12 {
+  #{'.col-xs' + '-' + $i} {
+    flex-basis: #{nth($widths, $i) + '%'};
+    max-width:: #{nth($widths, $i) + '%'};
+  }
+  .grid-gutters {
+    #{'.col-xs' + '-' + $i} {
+      flex-basis: calc(#{nth($widths, $i) + '%'} - 4px);
+      max-width: calc(#{nth($widths, $i) + '%'} - 4px);
+    }
+  }
+}
+
+/* Create columns and columns with gutter for each breakpoint > xs */
+@each $size in (sm, md, lg, xl) {
+  @media all and (min-width: map-get($breakpoints, $size)) {
+    @for $i from 1 through 12 {
+      #{'.col-' + $size + '-' + $i} {
+        flex-basis: #{nth($widths, $i) + '%'};
+        max-width: #{nth($widths, $i) + '%'};
+      }
+
+      .grid-gutters {
+        #{'.col-' + $size + '-' + $i} {
+          flex-basis: calc(#{nth($widths, $i) + '%'} - 4px);
+          max-width: calc(#{nth($widths, $i) + '%'} - 4px);
+        }
+      }
+    }
+  }
+}
+
+/* Flex helper classes */
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+  & > * {
+    margin: 4px;
+  }
+}
+.flex-grid {
+  justify-content: space-between;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-align-center {
+  align-items: center;
+}
+.flex-align-start {
+  align-items: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+
+.grid-gutters {
+  justify-content: space-between;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}

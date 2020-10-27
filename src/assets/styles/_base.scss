@@ -1,0 +1,26 @@
+body {
+  margin: $header-height 0 0 0;
+  padding: 2em 0 0 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, .7);
+  font-size: 1.2em;
+  padding: 4px;
+  &:focus {
+    border: 2px solid rgba(0, 0, 0, 1);
+
+    outline: none;
+  }
+}
+form {
+  margin: 0;
+}
+a {
+  color: $theme-color-text-dark;
+}

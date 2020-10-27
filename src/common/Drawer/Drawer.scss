@@ -1,0 +1,24 @@
+@import '../../assets/styles/_variables';
+
+.drawer {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  transition: width .45s ease-in-out;
+  width: 0px;
+  &.hide {
+    width: 0px;
+  }
+  &.show {
+    width: $drawer-width;
+  }
+}
+.drawer-header {
+  height: $header-height;
+  background-color: $theme-color-bg;
+  padding: 8px;
+  box-sizing: border-box;
+  color: #fff;
+}

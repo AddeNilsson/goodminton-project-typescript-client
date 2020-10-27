@@ -1,0 +1,68 @@
+@import '../../assets/styles/_variables';
+
+.icon {
+  & > * {
+    fill:none;
+    stroke-linejoin:round;
+    stroke-linecap:round;
+    stroke-width: 2.5px;
+  }
+}
+.icon-primary {
+  stroke: $theme-color-text-light;
+}
+.icon-fill-primary {
+  color: $theme-color-text-light;
+}
+.icon-secondary {
+  stroke: $theme-color-bg;
+}
+.icon-fill-secondary {
+  color: $theme-color-bg;
+}
+.icon-black {
+  stroke: $black;
+}
+.icon-fill-black {
+  color: $black;
+}
+.icon-white {
+  stroke: $white;
+}
+.icon-fill-white {
+  color: $white;
+}
+.icon-error {
+  stroke: $text-color-error;
+}
+.icon-fill-error {
+  color: $text-color-error;
+}
+.icon-xs {
+ height: 1em;
+}
+.icon-sm {
+  height: 1.25em;
+}
+.icon-md {
+  height: 1.75em;
+}
+.icon-lg {
+  height: 2.25em;
+}
+.icon-xl {
+  height: 2.75em;
+}
+
+.delete-icon {
+  path {
+    fill: currentColor;
+  }
+}
+
+.icon-warning {
+  & > * {
+    stroke: none;
+    fill: currentColor;
+  }
+}

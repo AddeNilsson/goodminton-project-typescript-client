@@ -1,0 +1,10 @@
+.hide-sm-down {
+  @media all and (max-width: map-get($breakpoints, "sm")) {
+    display: none;
+  }
+}
+.hide-md-down {
+  @media all and (max-width: map-get($breakpoints, "md")) {
+    display: none;
+  }
+}

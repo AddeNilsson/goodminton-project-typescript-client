@@ -1,0 +1,131 @@
+@import '../../assets/styles/_variables';
+
+.title, .heading, .paragraph, .caption, .subtitle, .label {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.heading {
+  font-family: Roboto, sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.title {
+  font-family: 'Roboto Mono', monospace;
+  font-size:  map-get($text-size, "title");
+  font-weight: bold;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-family: Roboto, sans-serif;
+  font-size: map-get($text-size, "subtitle");
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.paragraph {
+  font-family: Roboto, sans-serif;
+  font-size: map-get($text-size, "p");
+  line-height: 1.5;
+  margin: 0;
+}
+
+.caption {
+  font-family: Roboto, sans-serif;
+  font-size: map-get($text-size, "caption");
+  line-height: 1.2;
+  margin: 0;
+}
+
+.label {
+  font-family: Roboto, sans-serif;
+  font-size: map-get($text-size, "label");
+  line-height: 1.2;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.btn-text {
+  font-family: Roboto, sans-serif;
+  font-size: map-get($text-size, "btn");
+  line-height: 1.2;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.text-dark {
+  color: $text-color-dark;
+}
+.text-light {
+  color: $text-color-light;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-success {
+  color: $text-color-success;
+}
+.text-error {
+  color: $text-color-error;
+}
+.text-sm {
+  font-size: .8em;
+}
+.text-bold {
+  font-weight: 700;
+}
+.text-block-margin p:not(:first-child) {
+  margin: 1em auto;
+}
+.text-line-wrap {
+  white-space: pre-line;
+}
+
+@media all and (min-width: map-get($breakpoints, 'sm')) {
+  .heading {
+    font-size: 1.25 * map-get($text-size, "heading");
+  }
+  .title {
+    font-size: 1.25 * map-get($text-size, "title");
+  }
+  .text-right-sm-up {
+    text-align: right;
+  }
+}
+
+@media all and (min-width: map-get($breakpoints, 'md')) {
+  .heading {
+    font-size: 1.5 * map-get($text-size, "heading");
+  }
+  .title {
+    font-size: 1.5 * map-get($text-size, "title");
+  }
+}
+
+@media all and (min-width: map-get($breakpoints, 'lg')) {
+  .heading {
+    font-size: 2 * map-get($text-size, "heading");
+  }
+}
+
+@media all and (min-width: map-get($breakpoints, 'xxl')) {
+  .heading {
+    font-size: 3 * map-get($text-size, "heading");
+  }
+  .title {
+    font-size: 2.5 * map-get($text-size, "title");
+  }
+  .subtitle {
+    font-size: 2.25 * map-get($text-size, "subtitle");
+  }
+  .paragraph {
+    font-size: 1.5 * map-get($text-size, "p");
+  }
+}
